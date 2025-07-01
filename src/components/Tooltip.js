@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const Tooltip = ({text,children}) => {
     const[show,setShow] = useState(false);
   return (
-    <div 
+    <h2 
     onMouseEnter={()=>setShow(true)}
     onMouseLeave={()=>setShow(false)}
    className='tooltip'
@@ -11,14 +11,14 @@ const Tooltip = ({text,children}) => {
     
    {
     show &&(
-        <h2 className='tooltiptext'>
+        <div className='tooltiptext'>
             {text}
-        </h2>
+        </div>
     )
    }
    {children}
 
-    </div>
+    </h2>
   )
 }
 
