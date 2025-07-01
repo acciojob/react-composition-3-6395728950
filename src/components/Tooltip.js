@@ -11,9 +11,9 @@ const Tooltip = ({text,children}) => {
     
    {
     show &&(
-        <div className='tooltiptext'>
+        <h2 className='tooltiptext'>
             {text}
-        </div>
+        </h2>
     )
    }
    {children}
