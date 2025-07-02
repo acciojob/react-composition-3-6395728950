@@ -6,17 +6,19 @@ const Tooltip = ({text,children}) => {
     <h2 
     onMouseEnter={()=>setShow(true)}
     onMouseLeave={()=>setShow(false)}
-   className='tooltiptext'
+   className='tooltip'
     >
     
    {
     show &&(
-        <div className='tooltip'>
+        <div className='tooltiptext'>
             {text}
         </div>
     )
    }
-   {children}
+    <div className='tooltiptext'>
+      {children}
+    </div>
 
     </h2>
   )
